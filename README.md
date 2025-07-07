@@ -7,11 +7,12 @@ yes it is pack with real installer and regsvr32.exe , and yes the attack starts 
 # DLL Hijacking in Notepad++ v8.8.1: A Practical PoC Write-up
 
 # Introduction
-I tried demonstrate a proof-of-concept (PoC) exploit targeting Notepad++ v8.8.1, which is vulnerable to DLL hijacking via the NppShell.dll component(you also can try with others dll files within the notepad installer). This PoC shows how an attacker can achieve arbitrary code execution by planting a malicious DLL and tricking the application into loading it.
+I tried to demonstrate a proof-of-concept (PoC) exploit targeting Notepad++ v8.8.1, which is vulnerable to DLL hijacking via the NppShell.dll component(you also can try with others dll files within the notepad installer). This PoC shows how an attacker can achieve arbitrary code execution by planting a malicious DLL and tricking the application into loading it.
 
 ⚠️ Disclaimer: This write-up is for educational purposes only. Always test in isolated environments and never target unauthorized systems.
 
 # What is DLL hijacking?
+
 DLL hijacking is a well-known attack technique where an application loads a malicious DLL instead of a legitimate one due to insecure search paths or missing integrity checks. Once the application loads the malicious DLL, attacker-controlled code executes in the context of the application.
 
 🛠️ Environment setup
