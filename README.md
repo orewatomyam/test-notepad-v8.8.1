@@ -1,5 +1,5 @@
 # test-notepad-v8.8.1
-this is what i do, and at the same time im learning too
+this is what i do, and at the same time im learning too from everyone
 
 "Here’s a new plugin pack for Notepad++ to improve your coding productivity! Download it now 💡✨"
 yes it is pack with real installer and regsvr32.exe , and yes the attack starts there, phishing and social engineering at its best
@@ -56,9 +56,19 @@ On your Kali machine, listen for the shell:
 nc -lvnp <attacker_port>
 Once Notepad++ installed, connection established — you now have code execution on the victim.
 
+💥 Impact
+This attack enables local privilege escalation or persistence if combined with initial access.
+
+🛡️ Mitigation
+Always upgrade to latest Notepad++ version 
+
+Remove old or unused DLL files.
+
+Apply strict file system permissions to prevent unauthorized modifications.
+
  # Important Notes ⚠️ 
 This PoC only works during the installation phase.
 It requires the victim to execute a trojanized installer package that includes your malicious DLL and script.
 It does not work on already installed and running Notepad++ software if it was installed correctly before.
 
-
+thankyouu!
