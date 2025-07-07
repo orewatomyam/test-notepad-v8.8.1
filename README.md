@@ -56,10 +56,10 @@ On your Kali machine, listen for the shell:
 nc -lvnp <attacker_port>
 Once Notepad++ installed, connection established — you now have code execution on the victim.
 
-💥 Impact
+#  Impact💥
 This attack enables local privilege escalation or persistence if combined with initial access.
 
-🛡️ Mitigation
+# Mitigation🛡️
 Always upgrade to latest Notepad++ version 
 
 Remove old or unused DLL files.
