@@ -60,7 +60,7 @@ Once Notepad++ installed, connection established — you now have code execution
 This attack enables local privilege escalation or persistence if combined with initial access.
 
 # Mitigation🛡️
-Always upgrade to latest Notepad++ version 
+Mind to upgrade to latest version 
 
 Remove old or unused DLL files.
 
